@@ -1,19 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TaxiWPF.dto
+﻿namespace TaxiWPF.dto
 {
     class UserDTO
     {
 
-        string username;
-        string password;
+        public string username;
+        public string password;
 
-        public UserDTO(string v1, string v2)
+        public UserDTO(string username, string password)
         {
+            this.username = username;
+            this.password = password;
         }
     }
 }

@@ -27,7 +27,6 @@ C:\Users\alexzhyshko\source\repos\TaxiWPF\TaxiWPF\obj\Debug\TaxiWPF.csproj.CoreC
 C:\Users\alexzhyshko\source\repos\TaxiWPF\TaxiWPF\obj\Debug\TaxiWPF.csproj.CopyComplete
 C:\Users\alexzhyshko\source\repos\TaxiWPF\TaxiWPF\obj\Debug\TaxiWPF.exe
 C:\Users\alexzhyshko\source\repos\TaxiWPF\TaxiWPF\obj\Debug\TaxiWPF.pdb
-C:\Users\alexzhyshko\source\repos\TaxiWPF\TaxiWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\alexzhyshko\source\repos\TaxiWPF\TaxiWPF\bin\Debug\Microsoft.Xaml.Behaviors.dll
 C:\Users\alexzhyshko\source\repos\TaxiWPF\TaxiWPF\bin\Debug\Prism.dll
 C:\Users\alexzhyshko\source\repos\TaxiWPF\TaxiWPF\bin\Debug\Prism.Wpf.dll
@@ -37,3 +36,15 @@ C:\Users\alexzhyshko\source\repos\TaxiWPF\TaxiWPF\bin\Debug\Prism.pdb
 C:\Users\alexzhyshko\source\repos\TaxiWPF\TaxiWPF\bin\Debug\Prism.xml
 C:\Users\alexzhyshko\source\repos\TaxiWPF\TaxiWPF\bin\Debug\Prism.Wpf.pdb
 C:\Users\alexzhyshko\source\repos\TaxiWPF\TaxiWPF\bin\Debug\Prism.Wpf.xml
+C:\Users\alexzhyshko\source\repos\TaxiWPF\TaxiWPF\bin\Debug\MySqlConnector.dll
+C:\Users\alexzhyshko\source\repos\TaxiWPF\TaxiWPF\bin\Debug\System.Buffers.dll
+C:\Users\alexzhyshko\source\repos\TaxiWPF\TaxiWPF\bin\Debug\System.Memory.dll
+C:\Users\alexzhyshko\source\repos\TaxiWPF\TaxiWPF\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\alexzhyshko\source\repos\TaxiWPF\TaxiWPF\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\alexzhyshko\source\repos\TaxiWPF\TaxiWPF\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\alexzhyshko\source\repos\TaxiWPF\TaxiWPF\bin\Debug\MySqlConnector.xml
+C:\Users\alexzhyshko\source\repos\TaxiWPF\TaxiWPF\bin\Debug\System.Buffers.xml
+C:\Users\alexzhyshko\source\repos\TaxiWPF\TaxiWPF\bin\Debug\System.Memory.xml
+C:\Users\alexzhyshko\source\repos\TaxiWPF\TaxiWPF\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\alexzhyshko\source\repos\TaxiWPF\TaxiWPF\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\alexzhyshko\source\repos\TaxiWPF\TaxiWPF\bin\Debug\System.Threading.Tasks.Extensions.xml
