@@ -2,10 +2,11 @@
 {
     class CarDTO
     {
-        string plate;
-
-        public CarDTO(string plate)
+        int id;
+        public string plate;
+        public CarDTO(int id, string plate)
         {
+            this.id = id;
             this.plate = plate;
         }
 

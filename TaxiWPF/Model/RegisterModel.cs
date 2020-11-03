@@ -1,30 +1,31 @@
 ﻿using MySqlConnector;
-using Prism.Mvvm;
 using System;
-using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
-using System.Data.Common;
-using System.Data.SqlClient;
-using System.Data.SqlTypes;
-using System.Linq;
-using System.Security.RightsManagement;
-using System.Text;
-using System.Threading.Tasks;
 using TaxiWPF.dto;
 using TaxiWPF.Service;
 
 namespace TaxiWPF.Model
 {
-    class RegisterModel
+    class RegisterModel : INotifyPropertyChanged
     {
-
-        public string ErrorMessage;
-       
-
-        public RegisterModel()
-        {
-
+        private string _errMsg;
+        public string ErrorMessage { 
+            get { 
+                return _errMsg; 
+            }
+            set {
+                _errMsg = value;
+                OnPropertyChanged("ErrorMessage");
+            } 
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
 
         public bool tryRegister(UserDTO user)
         {

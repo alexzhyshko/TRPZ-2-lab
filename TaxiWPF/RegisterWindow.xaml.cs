@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -21,22 +22,35 @@ namespace TaxiWPF
     public partial class RegisterWindow : Window
     {
 
+
         private RegisterModel _model = new RegisterModel();
 
         public RegisterWindow()
         {
             InitializeComponent();
+            DataContext = _model;
         }
 
         private void submitButton_Click(object sender, RoutedEventArgs e)
         {
-            bool result = _model.tryRegister(new dto.UserDTO("username", "password"));
+            string username = usernameText.Text;
+            string password = passwordText.Password;
+            bool result = _model.tryRegister(new dto.UserDTO(username, password));
             if (result)
             {
-                //proceed to login page
-                return;
+                goToLoginWindow();
             }
-            errMsg.Text = _model.ErrorMessage;
+        }
+
+        private void goToLoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            goToLoginWindow();
+        }
+
+        private void goToLoginWindow()
+        {
+            new LoginWindow().Show();
+            Close();
         }
     }
 }

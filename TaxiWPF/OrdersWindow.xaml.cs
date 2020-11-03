@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TaxiWPF.Model;
 
 namespace TaxiWPF
 {
@@ -19,9 +20,20 @@ namespace TaxiWPF
     /// </summary>
     public partial class OrdersWindow : Window
     {
-        public OrdersWindow()
+
+        public string Username { get; private set; }
+
+        private OrderModel _model;
+
+        public OrdersWindow(string username)
         {
+            DataContext = _model;
+            _model = new OrderModel(username);
             InitializeComponent();
+
+            //TODO debug binding, doesn't work!!
+            ordersList.ItemsSource = _model.ordersList;
+            Username = username;
         }
     }
 }

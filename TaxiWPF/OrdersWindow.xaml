@@ -8,28 +8,41 @@
         Title="OrdersWindow" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="40"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="40"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="20"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="20"/>
+            <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
-        <ListView Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="4">
+
+        <ListView Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="4" Name="ordersList" ItemsSource="{Binding ordersList}" VerticalAlignment="Stretch" SelectionMode="Extended" >
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn Width="auto"
+                                DisplayMemberBinding="{Binding Path=Id}"
+                                Header="Id" />
+                    <GridViewColumn Width="auto"
+                                DisplayMemberBinding="{Binding Path=Departure}"
+                                Header="Departure" />
+                    <GridViewColumn Width="auto"
+                                DisplayMemberBinding="{Binding Path=Destination}"
+                                Header="Destination" />
+                    <GridViewColumn Width="auto"
+                                DisplayMemberBinding="{Binding Path=OrderTimestamp}"
+                                Header="Order time" />
                 </GridView>
             </ListView.View>
         </ListView>
+
 
     </Grid>
 </Window>

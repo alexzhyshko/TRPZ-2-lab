@@ -98,16 +98,21 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="dto\CarDTO.cs" />
+    <Compile Include="dto\DrivingDTO.cs" />
     <Compile Include="dto\DriverDTO.cs" />
     <Compile Include="dto\OrderDTO.cs" />
     <Compile Include="dto\UserDTO.cs" />
+    <Compile Include="Model\DrivingModel.cs" />
     <Compile Include="Model\ConnectionManager.cs" />
+    <Compile Include="Model\LoginModel.cs" />
+    <Compile Include="Model\MainModel.cs" />
+    <Compile Include="Model\OrderModel.cs" />
     <Compile Include="Model\RegisterModel.cs" />
+    <Compile Include="Model\UserModel.cs" />
     <Compile Include="OrdersWindow.xaml.cs">
       <DependentUpon>OrdersWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Service\HashingService.cs" />
-    <Compile Include="VM\RegisterVM.cs" />
     <Compile Include="RegisterWindow.xaml.cs">
       <DependentUpon>RegisterWindow.xaml</DependentUpon>
     </Compile>

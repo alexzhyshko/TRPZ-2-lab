@@ -2,10 +2,12 @@
 {
     class DriverDTO
     {
-        string name;
+        public int id;
+        public string name;
 
-        public DriverDTO(string name)
+        public DriverDTO(int id, string name)
         {
+            this.id = id;
             this.name = name;
         }
     }
