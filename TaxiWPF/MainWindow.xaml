@@ -7,8 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
 
+
     <DockPanel>
-        <Frame x:Name="_mainFrame" />
+        <Frame x:Name="_mainFrame" NavigationUIVisibility="Hidden"/>
     </DockPanel>
     
 

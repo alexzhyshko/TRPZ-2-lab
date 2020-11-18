@@ -35,26 +35,26 @@ namespace TaxiWPF
             string password = passwordText.Password;
             if (_model.tryLogin(new dto.UserDTO(username, password)))
             {
-                goToMainWindow(username);
+                goToMainPage(username);
             }
         }
 
         
         private void goToRegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            goToRegisterWindow();
+            goToRegisterPage();
         }
 
 
-        private void goToMainWindow(string username)
+        private void goToMainPage(string username)
         {
-
+            ((MainWindow)Window.GetWindow(this)).transitionTo(new MainPage(username));
         }
 
 
-        private void goToRegisterWindow()
+        private void goToRegisterPage()
         {
-           
+            ((MainWindow)Window.GetWindow(this)).transitionTo(new RegisterPage());
         }
     }
 }

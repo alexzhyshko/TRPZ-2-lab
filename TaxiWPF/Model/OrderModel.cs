@@ -60,7 +60,7 @@ namespace TaxiWPF.Model
 
                 command.Connection.Open();
                 MySqlDataReader dr = command.ExecuteReader();
-                if (dr.Read())
+                while (dr.Read())
                 {
                     ordersList.Add(new OrderDTO(dr.GetInt32(0), dr.GetDateTime(3), dr.GetString(1), dr.GetString(2)));
                 }

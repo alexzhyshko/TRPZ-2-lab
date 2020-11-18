@@ -30,14 +30,72 @@
         <TextBlock Text="{Binding Path=Username}" Grid.Row="0" Grid.Column="5" Grid.ColumnSpan="1"/>
 
         <TextBlock Grid.Column="2" Grid.Row="1" Margin="0 0 0 20" Text="Departure: " HorizontalAlignment="Center" FontSize="28" FontFamily="Segoe UI Light"/>
-        <TextBox x:Name="departureText" Grid.Row="1" Grid.Column="4"  Width="150" Margin="0 0 0 0" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="departureText" Grid.Row="1" Grid.Column="4"  Width="150" Margin="0 0 0 0" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+            <TextBox.Triggers>
+                <EventTrigger RoutedEvent="TextBox.GotFocus">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation To="LightBlue" 
+                                    Storyboard.TargetProperty="(TextBox.Background).(SolidColorBrush.Color)" 
+                                    FillBehavior="HoldEnd" 
+                                    Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="TextBox.LostFocus">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation To="White" 
+                                    Storyboard.TargetProperty="(TextBox.Background).(SolidColorBrush.Color)" 
+                                    FillBehavior="HoldEnd" 
+                                    Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </TextBox.Triggers>
+        </TextBox>
 
         <TextBlock Grid.Column="2" Grid.Row="2" Margin="0 0 0 20" Text="Destination: " HorizontalAlignment="Center" FontSize="28" FontFamily="Segoe UI Light"/>
-        <TextBox x:Name="destinationText" Grid.Row="2" Grid.Column="4"  Width="150" Margin="0 0 0 0" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="destinationText" Grid.Row="2" Grid.Column="4"  Width="150" Margin="0 0 0 0" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+            <TextBox.Triggers>
+                <EventTrigger RoutedEvent="TextBox.GotFocus">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation To="LightBlue" 
+                                    Storyboard.TargetProperty="(TextBox.Background).(SolidColorBrush.Color)" 
+                                    FillBehavior="HoldEnd" 
+                                    Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                 <EventTrigger RoutedEvent="TextBox.LostFocus">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation To="White" 
+                                    Storyboard.TargetProperty="(TextBox.Background).(SolidColorBrush.Color)" 
+                                    FillBehavior="HoldEnd" 
+                                    Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </TextBox.Triggers>
+        </TextBox>
 
         <Button x:Name="submitButton" Grid.Column="4" Grid.Row="4" Background="Transparent"  Width="150" Height="30"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Order" FontFamily="Segoe UI Light" FontSize="20" Click="submitButton_Click"/>
 
-        <TextBlock Text="{Binding Path=ErrorMessage}"  x:Name="errMsg" Grid.Column="3" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="16" FontFamily="Segoe UI Light" Foreground="Red" Height="20"/>
+        <TextBlock Text="{Binding Path=ErrorMessage, NotifyOnTargetUpdated=True}"  Name="errMsg" Grid.Column="3" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="16" FontFamily="Segoe UI Light" Foreground="Red" Height="20">
+            <TextBlock.Triggers>
+                <EventTrigger RoutedEvent="Binding.TargetUpdated">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+ Storyboard.TargetProperty="Opacity"
+ From="0.0" To="1.0" Duration="0:0:1"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </TextBlock.Triggers>
+        </TextBlock>
 
         <Button x:Name="goToOrdersButton" Grid.Column="1" Grid.Row="0" Background="Transparent"  Width="100" Height="30"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="View orders" FontFamily="Segoe UI Light" FontSize="18" Click="goToOrdersButton_Click"/>
 

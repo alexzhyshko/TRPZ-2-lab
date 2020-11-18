@@ -34,8 +34,21 @@
         <Button x:Name="submitButton" Grid.Column="4" Grid.Row="4" Background="Transparent"  Width="150" Height="30"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Sign up" FontFamily="Segoe UI Light" FontSize="20" Click="submitButton_Click"/>
 
         <Button x:Name="goToLoginButton" Grid.Column="1" Grid.Row="5" Background="Transparent"  Width="150" Height="30"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Log in" FontFamily="Segoe UI Light" FontSize="14" Click="goToLoginButton_Click"/>
+
 
-        <TextBlock Text="{Binding Path=ErrorMessage}"  x:Name="errMsg" Grid.Column="3" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="16" FontFamily="Segoe UI Light" Foreground="Red" Height="20"/>
+        <TextBlock Text="{Binding Path=ErrorMessage, NotifyOnTargetUpdated=True}"  Name="errMsg" Grid.Column="3" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="16" FontFamily="Segoe UI Light" Foreground="Red" Height="20">
+            <TextBlock.Triggers>
+                <EventTrigger RoutedEvent="Binding.TargetUpdated">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+ Storyboard.TargetProperty="Opacity"
+ From="0.0" To="1.0" Duration="0:0:1"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </TextBlock.Triggers>
+        </TextBlock>
     </Grid>
 
 </Page>
