@@ -18,14 +18,14 @@ namespace TaxiWPF
     /// <summary>
     /// Логика взаимодействия для OrdersWindow.xaml
     /// </summary>
-    public partial class OrdersWindow : Window
+    public partial class OrdersPage : Page
     {
 
         public string Username { get; private set; }
 
         private OrderModel _model;
 
-        public OrdersWindow(string username)
+        public OrdersPage(string username)
         {
             DataContext = _model;
             _model = new OrderModel(username);

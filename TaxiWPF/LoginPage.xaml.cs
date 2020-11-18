@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -17,15 +16,14 @@ using TaxiWPF.Model;
 namespace TaxiWPF
 {
     /// <summary>
-    /// Логика взаимодействия для RegisterWindow.xaml
+    /// Логика взаимодействия для LoginWindow.xaml
     /// </summary>
-    public partial class RegisterWindow : Window
+    public partial class LoginPage : Page
     {
 
+        private LoginModel _model = new LoginModel();
 
-        private RegisterModel _model = new RegisterModel();
-
-        public RegisterWindow()
+        public LoginPage()
         {
             InitializeComponent();
             DataContext = _model;
@@ -35,22 +33,28 @@ namespace TaxiWPF
         {
             string username = usernameText.Text;
             string password = passwordText.Password;
-            bool result = _model.tryRegister(new dto.UserDTO(username, password));
-            if (result)
+            if (_model.tryLogin(new dto.UserDTO(username, password)))
             {
-                goToLoginWindow();
+                goToMainWindow(username);
             }
         }
 
-        private void goToLoginButton_Click(object sender, RoutedEventArgs e)
+        
+        private void goToRegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            goToLoginWindow();
+            goToRegisterWindow();
         }
 
-        private void goToLoginWindow()
+
+        private void goToMainWindow(string username)
         {
-            new LoginWindow().Show();
-            Close();
+
+        }
+
+
+        private void goToRegisterWindow()
+        {
+           
         }
     }
 }

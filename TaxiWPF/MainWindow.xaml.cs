@@ -21,33 +21,12 @@ namespace TaxiWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        private MainModel _model = new MainModel();
-
-        public string Username { get; private set; }
-
-        public MainWindow(string username)
+       
+        public MainWindow()
         {
             InitializeComponent();
-<<<<<<< Updated upstream
-            DataContext = _model;
-            _model.Username = username;
-            Username = username;
-        }
-
-        private void submitButton_Click(object sender, RoutedEventArgs e)
-        {
-            string departure = departureText.Text;
-            string destination = destinationText.Text;
-            _model.createOrder(departure, destination, Username);
-        }
-
-        private void goToOrdersButton_Click(object sender, RoutedEventArgs e)
-        {
-            new OrdersWindow(Username).Show();
-            Close();
-=======
             _mainFrame.Navigate(new RegisterPage());
->>>>>>> Stashed changes
         }
+
     }
 }

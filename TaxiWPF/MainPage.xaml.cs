@@ -25,11 +25,6 @@ namespace TaxiWPF
 
         public string Username { get; private set; }
 
-        public MainPage()
-        {
-
-        }
-
         public MainPage(string username)
         {
             InitializeComponent();
