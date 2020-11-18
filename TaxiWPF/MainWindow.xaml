@@ -6,42 +6,11 @@
         xmlns:local="clr-namespace:TaxiWPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="120"/>
-            <ColumnDefinition Width="20"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="40"/>
-        </Grid.RowDefinitions>
-        
-        <!-- Username top right-->
-        <TextBlock Text="{Binding Path=Username}" Grid.Row="0" Grid.Column="5" Grid.ColumnSpan="1"/>
 
-        <!-- Departure point -->
-        <TextBlock Grid.Column="2" Grid.Row="1" Margin="0 0 0 20" Text="Departure: " HorizontalAlignment="Center" FontSize="28" FontFamily="Segoe UI Light"/>
-        <TextBox x:Name="departureText" Grid.Row="1" Grid.Column="4"  Width="150" Margin="0 0 0 0" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+    <DockPanel>
+        <Frame x:Name="_mainFrame" />
+    </DockPanel>
+    
 
-        <!-- Departure point -->
-        <TextBlock Grid.Column="2" Grid.Row="2" Margin="0 0 0 20" Text="Destination: " HorizontalAlignment="Center" FontSize="28" FontFamily="Segoe UI Light"/>
-        <TextBox x:Name="destinationText" Grid.Row="2" Grid.Column="4"  Width="150" Margin="0 0 0 0" Height="30" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
 
-        <Button x:Name="submitButton" Grid.Column="4" Grid.Row="4" Background="Transparent"  Width="150" Height="30"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Order" FontFamily="Segoe UI Light" FontSize="20" Click="submitButton_Click"/>
-
-        <!-- Error msg-->
-        <TextBlock Text="{Binding Path=ErrorMessage}"  x:Name="errMsg" Grid.Column="3" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="16" FontFamily="Segoe UI Light" Foreground="Red" Height="20"/>
-        
-        <Button x:Name="goToOrdersButton" Grid.Column="1" Grid.Row="0" Background="Transparent"  Width="100" Height="30"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="View orders" FontFamily="Segoe UI Light" FontSize="18" Click="goToOrdersButton_Click"/>
-
-    </Grid>
 </Window>

@@ -13,5 +13,7 @@ namespace TaxiWPF
     /// </summary>
     public partial class App : Application
     {
+
+
     }
 }

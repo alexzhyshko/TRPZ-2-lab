@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\alexzhyshko\source\repos\TaxiWPF\TaxiWPF\App.xaml
-4-591804323
+51381544503
 
-211990491004
+221695763112
 133-1291872453
-LoginWindow.xaml;MainWindow.xaml;OrdersWindow.xaml;RegisterWindow.xaml;
+LoginPage.xaml;MainPage.xaml;MainWindow.xaml;OrdersPage.xaml;RegisterPage.xaml;
 
 False
 

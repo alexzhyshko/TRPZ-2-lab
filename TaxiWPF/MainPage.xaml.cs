@@ -17,18 +17,22 @@ using TaxiWPF.Model;
 namespace TaxiWPF
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для MainPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainPage : Page
     {
         private MainModel _model = new MainModel();
 
         public string Username { get; private set; }
 
-        public MainWindow(string username)
+        public MainPage()
+        {
+
+        }
+
+        public MainPage(string username)
         {
             InitializeComponent();
-<<<<<<< Updated upstream
             DataContext = _model;
             _model.Username = username;
             Username = username;
@@ -43,11 +47,7 @@ namespace TaxiWPF
 
         private void goToOrdersButton_Click(object sender, RoutedEventArgs e)
         {
-            new OrdersWindow(Username).Show();
-            Close();
-=======
-            _mainFrame.Navigate(new RegisterPage());
->>>>>>> Stashed changes
+            
         }
     }
 }
